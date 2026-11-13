@@ -51,3 +51,8 @@ npm start
 测试失败时记录具体命令、版本、错误与未覆盖范围。`docs/development-log.md` 保存实际验证结果；不要把计划或模拟结果记为通过。
 
 目前 Windows 上类型检查、构建和 3 项自动测试通过；隔离生产服务综合验收通过，种子首次导入 5 条、再次导入 0 条，独立子进程重启后已完成状态保留。浏览器已回归 UTC+8 下日期保存往返，以及 390×844 下单列看板、详情抽屉、任务表单入口和时间线横向滚动。真实 Codex、Claude Code 宿主及 macOS、Linux 实机仍待验收。三系统 CI 配置不等于已运行通过，具体最终测试记录见开发日志。
+
+## GitHub Actions verification
+
+For code commit `d822350c3aa19f598e1a0cd40b4b5f75c1f7d8a3`, [CI run 43449873249](https://github.com/handsomecaoyu/agent_dashboard/actions/runs/43449873249) passed npm ci, typecheck, tests, and build on Ubuntu, Windows, and macOS. These are headless CI checks; they do not establish interactive UI behavior on non-Windows hosts. The Windows host UI was checked separately as described above.
+
