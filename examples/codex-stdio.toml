@@ -1,0 +1,4 @@
+# 替换为本机构建产物的绝对路径，并先运行本地服务。
+[mcp_servers.agent-dashboard-stdio]
+command = "node"
+args = ["<项目绝对路径>/dist/server/mcp.js"]

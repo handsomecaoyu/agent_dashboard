@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "title": "实现本地任务服务与持久化",
+      "description": "实现 SQLite 任务、事件和结构化决策，与页面共享服务层。此种子是待办计划，不代表实施完成。",
+      "priority": "high",
+      "assignee": "backend"
+    },
+    {
+      "title": "接入真实 MCP 工具",
+      "description": "使用官方 SDK 实现 MCP，并验证客户端可调用任务、决策及进度工具。",
+      "priority": "high",
+      "assignee": "backend"
+    },
+    {
+      "title": "构建四态工作看板与时间线",
+      "description": "提供任务看板、单任务状态甘特和全局时间线；区分计划与实际时间。",
+      "priority": "high",
+      "assignee": "frontend"
+    },
+    {
+      "title": "完善使用、架构与交接文档",
+      "description": "依据实际实现与验证结果维护说明，记录限制和交接信息。",
+      "priority": "medium",
+      "assignee": "docs"
+    },
+    {
+      "title": "验证生产构建和实际客户端",
+      "description": "验证生产 Node 服务、浏览器、MCP 客户端和数据持久化，并如实记录平台覆盖范围。",
+      "priority": "high",
+      "assignee": "verification"
+    }
+  ]
+}

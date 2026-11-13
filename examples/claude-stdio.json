@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "agent-dashboard-stdio": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["<项目绝对路径>/dist/server/mcp.js"]
+    }
+  }
+}

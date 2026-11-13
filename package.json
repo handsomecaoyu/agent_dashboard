@@ -1,0 +1,36 @@
+{
+  "name": "agent-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n server,web \"tsx watch src/server/index.ts\" \"vite\"",
+    "build": "tsc -p tsconfig.server.json && vite build",
+    "start": "node dist/server/index.js",
+    "mcp": "node dist/server/mcp.js",
+    "seed": "tsx src/server/seed.ts fixtures/development-tasks.json",
+    "test": "tsx --test tests/server/server.test.ts tests/mcp/mcp.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.server.json",
+    "format": "prettier --write src tests"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.6",
+    "@vitejs/plugin-react": "4.4.1",
+    "concurrently": "9.1.2",
+    "prettier": "3.5.3",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  }
+}

@@ -1,0 +1,3 @@
+# 将此段合并到 Codex 配置；服务须先运行。
+[mcp_servers.agent-dashboard]
+url = "http://127.0.0.1:4317/mcp"
