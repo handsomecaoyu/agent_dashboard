@@ -19,3 +19,5 @@
 - README 已在远程 main 创建，SHA `fbd42150baf64b008b462a84aff1c0d3544aac7c` 经 `git ls-remote` 确认。后续项目源码远程交付另行验证。
 - Windows 上 `npm run typecheck`、`npm test`（3 项通过）和 `npm run build` 通过；官方 SDK 的 HTTP 与 stdio、独立进程重启持久化，以及浏览器任务、决策、SSE、UTC+8 日期、390px 窄屏和时间线局部复验通过。CI 配置覆盖三系统，但尚未视作通过。
 - 开发任务通过实际 MCP 写入，生产服务切换前后任务与事件一致。当前运行实例的数据在 `%TEMP%\agent-dashboard-live`，临时目录可能被清理；持久使用应迁移到用户指定的稳定目录。未伪造历史状态发生时间。
+- 依赖审计发现 Vite 开发依赖及 Zod 生产依赖高危项；Vite 已升级到兼容 Node 22.15 的 6.4.6，Zod 已升级到 4.6.7。升级后 `npm audit` 返回零漏洞，Windows 上 typecheck、3 项自动测试及构建通过；官方 MCP SDK 1.32.2 支持 Zod 4。实际客户端验证见测试文档，不应将审计结果视为长期不变。
+- 依赖升级后官方 SDK 的 HTTP 和构建版 stdio 已验证工具 schema、错误和决策；生产服务重启前后任务与事件内容一致。远端首次主提交 CI 的 Windows 和 Ubuntu 已通过，macOS runner 仍在排队；依赖补丁自身的远程 CI 结果另行核验。

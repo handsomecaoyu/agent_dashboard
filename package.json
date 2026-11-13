@@ -20,7 +20,7 @@
     "@modelcontextprotocol/sdk": "1.32.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "zod": "3.25.76"
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@types/node": "22.15.30",
@@ -31,6 +31,6 @@
     "prettier": "3.5.3",
     "tsx": "4.19.4",
     "typescript": "5.8.3",
-    "vite": "6.3.5"
+    "vite": "6.4.6"
   }
 }
